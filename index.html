@@ -433,11 +433,12 @@
 <section id="contact" class="py-16 bg-blue-600 text-white">
   <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="md:flex md:items-center md:justify-between">
-      
+
+      <!-- Left side: Contact info -->
       <div class="md:w-1/2 mb-8 md:mb-0">
         <h2 class="text-3xl font-bold mb-4">Let's Connect</h2>
         <p class="text-blue-100 mb-6">Interested in discussing teaching opportunities, workshops, or just want to exchange ideas about innovative education? Reach out!</p>
-        
+
         <div class="space-y-4">
           <div class="flex items-center">
             <i data-feather="mail" class="w-5 h-5 mr-3"></i>
@@ -452,7 +453,7 @@
             <span>123 Education Ave, Learning City</span>
           </div>
         </div>
-        
+
         <div class="flex space-x-4 mt-6">
           <a href="#" class="w-10 h-10 rounded-full bg-blue-500 flex items-center justify-center hover:bg-blue-400 transition duration-300">
             <i data-feather="twitter" class="w-5 h-5"></i>
@@ -465,44 +466,37 @@
           </a>
         </div>
       </div>
-      
+
+      <!-- Right side: Form -->
       <div class="md:w-1/2">
-        <!-- Using a hidden iframe to show thank-you message after submission -->
-        <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="thankYou()"></iframe>
-        
-        <form action="https://formspree.io/f/mjkasslg" method="POST" target="hidden_iframe" class="bg-white p-6 rounded-lg shadow-lg text-gray-800">
+        <form action="https://formspree.io/f/mjkasslg" method="POST" class="bg-white p-6 rounded-lg shadow-lg text-gray-800">
           <h3 class="text-xl font-semibold mb-4">Send a Message</h3>
-          
+
           <div class="mb-4">
             <label for="name" class="block text-gray-700 mb-2">Name</label>
-            <input type="text" id="name" name="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+            <input type="text" id="name" name="name" required
+              class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
           </div>
-          
+
           <div class="mb-4">
             <label for="email" class="block text-gray-700 mb-2">Email</label>
-            <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+            <input type="email" id="email" name="email" required
+              class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
           </div>
-          
+
           <div class="mb-4">
             <label for="message" class="block text-gray-700 mb-2">Message</label>
-            <textarea id="message" name="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required></textarea>
+            <textarea id="message" name="message" rows="4" required
+              class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
           </div>
-          
+
           <button type="submit" class="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition duration-300">Send Message</button>
-          <p id="thankyou-message" class="mt-4 text-green-600 font-semibold" style="display:none;">Thank you! Your message has been sent.</p>
         </form>
       </div>
-      
+
     </div>
   </div>
 </section>
-
-<script>
-function thankYou() {
-  const msg = document.getElementById('thankyou-message');
-  msg.style.display = 'block';
-}
-</script>
 
     <!-- Footer -->
     <footer class="bg-gray-900 text-white py-8">
@@ -544,6 +538,7 @@ function thankYou() {
 </body>
 
 </html>
+
 
 
 
