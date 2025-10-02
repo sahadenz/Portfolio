@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Photography</title>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.3.2/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-white text-gray-800">
+
+    <!-- Header -->
+    <header class="py-12 bg-gradient-to-r from-blue-500 to-purple-500 text-white text-center">
+        <h1 class="text-4xl font-bold mb-2">My <span class="gradient-text">Photography</span></h1>
+        <p class="text-lg">A collection of moments captured through my lens</p>
+    </header>
+
+    <!-- Gallery Section -->
+    <section class="py-16 px-4 max-w-6xl mx-auto">
+        <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            <!-- Example Photo -->
+            <div class="overflow-hidden rounded-xl shadow-lg hover:scale-105 transform transition">
+                <img src="photos/photo1.jpg" alt="Photo 1" class="w-full h-60 object-cover">
+            </div>
+            <div class="overflow-hidden rounded-xl shadow-lg hover:scale-105 transform transition">
+                <img src="photos/photo2.jpg" alt="Photo 2" class="w-full h-60 object-cover">
+            </div>
+            <div class="overflow-hidden rounded-xl shadow-lg hover:scale-105 transform transition">
+                <img src="photos/photo3.jpg" alt="Photo 3" class="w-full h-60 object-cover">
+            </div>
+            <div class="overflow-hidden rounded-xl shadow-lg hover:scale-105 transform transition">
+                <img src="photos/photo4.jpg" alt="Photo 4" class="w-full h-60 object-cover">
+            </div>
+            <!-- Add more photos similarly -->
+        </div>
+    </section>
+
+    <!-- Back Button -->
+    <div class="text-center py-12">
+        <a href="index.html" class="inline-block px-6 py-3 bg-blue-600 text-white rounded-full shadow-md hover:bg-blue-700 transition">
+            ← Back to Home
+        </a>
+    </div>
+
+    <script>
+        feather.replace();
+    </script>
+</body>
+</html>
+
