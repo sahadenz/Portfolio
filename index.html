@@ -3,89 +3,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Muhammed Sahad A S| Teacher</title>
+    <title>Sahad's Digital Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/feather-icons"></script>
-
-      <!-- Font Awesome for Social Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-</head>
-
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
         body {
             font-family: 'Poppins', sans-serif;
-            scroll-behavior: smooth;
+            background-color: #f8fafc;
         }
-        .hero-gradient {
-            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+        .floating { 
+            animation: floating 3s ease-in-out infinite;
         }
-        .skill-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
         }
-        .testimonial-card {
-            transition: all 0.3s ease;
-        }
-        .testimonial-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        .gradient-text {
+            background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
         }
     </style>
 </head>
-<body class="bg-white text-gray-800">
+<body class="min-h-screen bg-gradient-to-br from-blue-50 to-purple-50">
     <!-- Navigation -->
-    <nav class="fixed w-full bg-white shadow-sm z-50">
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-16 items-center">
-                <div class="flex-shrink-0 flex items-center">
-                    <span class="text-xl font-bold text-blue-600">Muhammed Sahad A S</span>
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <span class="text-xl font-bold gradient-text">Sahad's Portfolio</span>
                 </div>
-                <div class="hidden md:block">
-                    <div class="ml-10 flex items-center space-x-4">
-                        <a href="#home" class="px-3 py-2 rounded-md text-sm font-medium text-blue-600 bg-blue-50">Home</a>
-                        <a href="#about" class="px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-blue-600 hover:bg-blue-50">About</a>
-                        <a href="#skills" class="px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-blue-600 hover:bg-blue-50">Skills</a>
-                        <a href="#testimonials" class="px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-blue-600 hover:bg-blue-50">Testimonials</a>
-                        <a href="#contact" class="px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-blue-600 hover:bg-blue-50">Contact</a>
-                    </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#about" class="text-gray-600 hover:text-blue-600 transition">About</a>
+                    <a href="#experience" class="text-gray-600 hover:text-blue-600 transition">Experience</a>
+                    <a href="#education" class="text-gray-600 hover:text-blue-600 transition">Education</a>
+                    <a href="#skills" class="text-gray-600 hover:text-blue-600 transition">Skills</a>
+                    <a href="#hobbies" class="text-gray-600 hover:text-blue-600 transition">Hobbies</a>
+                    <a href="#contact" class="text-gray-600 hover:text-blue-600 transition">Contact</a>
                 </div>
-                <div class="md:hidden">
-                    <button class="mobile-menu-button p-2 rounded-md text-gray-600 hover:text-blue-600 hover:bg-blue-50 focus:outline-none">
+                <div class="md:hidden flex items-center">
+                    <button id="menu-btn" class="text-gray-600">
                         <i data-feather="menu"></i>
                     </button>
                 </div>
             </div>
         </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white shadow-lg rounded-b-lg">
+            <div class="px-4 pt-2 pb-3 space-y-1">
+                <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-blue-600 hover:bg-blue-50 transition">About</a>
+                <a href="#experience" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-blue-600 hover:bg-blue-50 transition">Experience</a>
+                <a href="#education" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-blue-600 hover:bg-blue-50 transition">Education</a>
+                <a href="#skills" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-blue-600 hover:bg-blue-50 transition">Skills</a>
+                <a href="#hobbies" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-blue-600 hover:bg-blue-50 transition">Hobbies</a>
+                <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-blue-600 hover:bg-blue-50 transition">Contact</a>
+            </div>
+        </div>
     </nav>
 
-    <!-- Mobile Menu -->
-    <div class="mobile-menu hidden md:hidden fixed inset-0 z-40 bg-white pt-16">
-        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            <a href="#home" class="block px-3 py-2 rounded-md text-base font-medium text-blue-600 bg-blue-50">Home</a>
-            <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-blue-600 hover:bg-blue-50">About</a>
-            <a href="#skills" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-blue-600 hover:bg-blue-50">Skills</a>
-            <a href="#testimonials" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-blue-600 hover:bg-blue-50">Testimonials</a>
-            <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-blue-600 hover:bg-blue-50">Contact</a>
-        </div>
-    </div>
-
     <!-- Hero Section -->
-    <section id="home" class="hero-gradient pt-24 pb-16 md:pt-32 md:pb-24">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="md:flex md:items-center md:justify-between">
-                <div class="md:w-1/2 mb-10 md:mb-0">
-                    <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-4 text-gray-800">Inspiring Young Minds Through <span class="text-blue-600">Innovative Teaching</span></h1>
-                    <p class="text-lg text-gray-600 mb-8">With 3 years of experience in primary and high school education, I specialize in English, Science, and Social Studies, blending technology with traditional teaching methods for optimal student engagement.</p>
-                    <div class="flex space-x-4">
-                        <a href="#contact" class="px-6 py-3 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition duration-300">Get In Touch</a>
-                        <a href="#about" class="px-6 py-3 border border-blue-600 text-blue-600 rounded-lg font-medium hover:bg-blue-50 transition duration-300">Learn More</a>
+    <section class="py-20 px-4">
+        <div class="max-w-6xl mx-auto">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-12">
+                <div class="md:w-1/2">
+                    <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
+                        Hi, I'm <span class="gradient-text">Sahad A S</span>
+                    </h1>
+                    <h2 class="text-2xl md:text-3xl font-semibold text-gray-600 mb-6">
+                        Passionate English Educator & Digital Learning Enthusiast
+                    </h2>
+                    <p class="text-lg text-gray-600 mb-8">
+                        Committed to creating engaging learning environments where students can thrive academically while developing critical thinking and communication skills.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#contact" class="px-6 py-3 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700 transition flex items-center gap-2">
+                            <i data-feather="mail"></i> Contact Me
+                        </a>
+                        <a href="#experience" class="px-6 py-3 bg-white text-blue-600 border border-blue-600 rounded-lg shadow hover:bg-blue-50 transition flex items-center gap-2">
+                            <i data-feather="briefcase"></i> My Experience
+                        </a>
                     </div>
                 </div>
                 <div class="md:w-1/2 flex justify-center">
-                    <div class="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-white shadow-xl">
-                        <img src="Sahad.jpg" alt="Teacher Portrait" class="w-full h-full object-cover">
-                        <div class="absolute inset-0 bg-blue-600 opacity-10"></div>
+                    <div class="relative">
+                        <img src="http://static.photos/education/640x360/42" alt="Sahad's Profile" class="rounded-2xl shadow-xl w-full max-w-md floating">
+                        <div class="absolute -bottom-6 -right-6 bg-blue-100 p-4 rounded-xl shadow-lg">
+                            <div class="flex items-center gap-2">
+                                <div class="bg-blue-600 p-2 rounded-full">
+                                    <i data-feather="award" class="text-white"></i>
+                                </div>
+                                <p class="font-medium">CTET Certified Teacher</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -93,206 +107,69 @@
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-16 bg-white">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="about" class="py-16 bg-white px-4">
+        <div class="max-w-6xl mx-auto">
             <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-gray-800 mb-4">About Me</h2>
-                <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">About <span class="gradient-text">Me</span></h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto rounded-full"></div>
             </div>
-            
-            <div class="md:flex md:items-center md:space-x-12">
-                <div class="md:w-1/3 mb-8 md:mb-0">
-                    <div class="bg-blue-50 p-6 rounded-xl shadow-sm">
-                        <div class="flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4">
-                            <i data-feather="book" class="text-blue-600 w-6 h-6"></i>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <p class="text-lg text-gray-600 mb-6">
+                        A dedicated high school English teacher with a passion for innovative teaching methodologies and digital learning solutions. With over 4 years of experience, I specialize in creating engaging, student-centered learning environments.
+                    </p>
+                    <p class="text-lg text-gray-600 mb-6">
+                        My teaching philosophy revolves around fostering critical thinking, effective communication, and lifelong learning skills in students while leveraging technology to enhance educational outcomes.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-4">
+                            <div class="bg-blue-100 p-3 rounded-full">
+                                <i data-feather="book-open" class="text-blue-600"></i>
+                            </div>
+                            <p class="text-gray-700">Specialized in English Language & Literature</p>
                         </div>
-                        <h3 class="text-xl font-semibold mb-2 text-gray-800">Teaching Philosophy</h3>
-                        <p class="text-gray-600">I believe in creating curiosity-driven learning environments where students feel empowered to explore, question, and discover knowledge through engaging, technology-enhanced lessons.</p>
-                    </div>
-                </div>
-                
-                <div class="md:w-2/3">
-                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Muhammed Sahad, MA, B.Ed.</h3>
-                    <p class="text-gray-600 mb-6">With three years of dedicated teaching experience across primary and high school levels, I specialize in English, Science, and Social Studies. My approach combines traditional pedagogy with innovative technology integration to create dynamic, student-centered learning experiences.</p>
-                    
-                    <div class="grid grid-cols-2 gap-4 mb-6">
-                        <div>
-                            <h4 class="font-semibold text-gray-800 mb-2">Education</h4>
-                            <ul class="text-gray-600 space-y-2">
-                                <li class="flex items-start">
-                                    <i data-feather="check" class="text-blue-600 mr-2 mt-1 w-4 h-4"></i>
-                                    <span>B.Ed. in English</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <i data-feather="check" class="text-blue-600 mr-2 mt-1 w-4 h-4"></i>
-                                    <span>B.A. in English, History & Economics </span>
-                                </li>
-                            </ul>
+                        <div class="flex items-center gap-4">
+                            <div class="bg-purple-100 p-3 rounded-full">
+                                <i data-feather="monitor" class="text-purple-600"></i>
+                            </div>
+                            <p class="text-gray-700">Expert in Educational Technology Integration</p>
                         </div>
-                        <div>
-                            <h4 class="font-semibold text-gray-800 mb-2">Certifications</h4>
-                            <ul class="text-gray-600 space-y-2">
-                                <li class="flex items-start">
-                                    <i data-feather="check" class="text-blue-600 mr-2 mt-1 w-4 h-4"></i>
-                                    <span>Google Certified Educator</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <i data-feather="check" class="text-blue-600 mr-2 mt-1 w-4 h-4"></i>
-                                    <span>CTET|KTET Certification</span>
-                                </li>
-                            </ul>
+                        <div class="flex items-center gap-4">
+                            <div class="bg-green-100 p-3 rounded-full">
+                                <i data-feather="users" class="text-green-600"></i>
+                            </div>
+                            <p class="text-gray-700">Mentor for junior teachers in digital pedagogy</p>
                         </div>
                     </div>
-                    
-                    <div class="flex flex-wrap gap-2">
-                        <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">Student-Centered</span>
-                        <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">Tech Integration</span>
-                        <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">Differentiated Instruction</span>
-                        <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">Project-Based Learning</span>
-                    </div>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="py-16 bg-gray-50">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-gray-800 mb-4">My Teaching Skills</h2>
-                <p class="text-gray-600 max-w-2xl mx-auto">Specialized expertise in multiple disciplines with a focus on innovative teaching methodologies</p>
-                <div class="w-20 h-1 bg-blue-600 mx-auto mt-4"></div>
-            </div>
-            
-            <div class="grid md:grid-cols-3 gap-8">
-                <!-- Skill Card 1 -->
-                <div class="skill-card bg-white p-6 rounded-xl shadow-sm transition duration-300">
-                    <div class="flex items-center justify-center w-12 h-12 bg-blue-100 rounded-full mb-4">
-                        <i data-feather="book-open" class="text-blue-600 w-6 h-6"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-2 text-gray-800">English Instruction</h3>
-                    <p class="text-gray-600 mb-4">Expertise in literature analysis, creative writing, and grammar instruction with a focus on developing critical thinking and communication skills.</p>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="px-2 py-1 bg-blue-50 text-blue-600 rounded-full text-xs">Literature</span>
-                        <span class="px-2 py-1 bg-blue-50 text-blue-600 rounded-full text-xs">Writing</span>
-                        <span class="px-2 py-1 bg-blue-50 text-blue-600 rounded-full text-xs">Grammar</span>
-                    </div>
-                </div>
-                
-                <!-- Skill Card 2 -->
-                <div class="skill-card bg-white p-6 rounded-xl shadow-sm transition duration-300">
-                    <div class="flex items-center justify-center w-12 h-12 bg-blue-100 rounded-full mb-4">
-                        <i data-feather="flask" class="text-blue-600 w-6 h-6"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-2 text-gray-800">Science Education</h3>
-                    <p class="text-gray-600 mb-4">Hands-on, inquiry-based approach to teaching biology, chemistry, and physics with integrated technology for virtual labs and simulations.</p>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="px-2 py-1 bg-blue-50 text-blue-600 rounded-full text-xs">Biology</span>
-                        <span class="px-2 py-1 bg-blue-50 text-blue-600 rounded-full text-xs">Chemistry</span>
-                        <span class="px-2 py-1 bg-blue-50 text-blue-600 rounded-full text-xs">Physics</span>
-                    </div>
-                </div>
-                
-                <!-- Skill Card 3 -->
-                <div class="skill-card bg-white p-6 rounded-xl shadow-sm transition duration-300">
-                    <div class="flex items-center justify-center w-12 h-12 bg-blue-100 rounded-full mb-4">
-                        <i data-feather="globe" class="text-blue-600 w-6 h-6"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-2 text-gray-800">Social Studies</h3>
-                    <p class="text-gray-600 mb-4">Interactive lessons in history, geography, and economics using multimedia resources and project-based learning to connect past with present.</p>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="px-2 py-1 bg-blue-50 text-blue-600 rounded-full text-xs">History</span>
-                        <span class="px-2 py-1 bg-blue-50 text-blue-600 rounded-full text-xs">Geography</span>
-                        <span class="px-2 py-1 bg-blue-50 text-blue-600 rounded-full text-xs">Economics</span>
-                    </div>
-                </div>
-                
-                <!-- Skill Card 4 -->
-                <div class="skill-card bg-white p-6 rounded-xl shadow-sm transition duration-300">
-                    <div class="flex items-center justify-center w-12 h-12 bg-blue-100 rounded-full mb-4">
-                        <i data-feather="tablet" class="text-blue-600 w-6 h-6"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-2 text-gray-800">Tech Integration</h3>
-                    <p class="text-gray-600 mb-4">Expert in leveraging educational technology including LMS platforms, interactive whiteboards, and educational apps to enhance learning outcomes.</p>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="px-2 py-1 bg-blue-50 text-blue-600 rounded-full text-xs">LMS</span>
-                        <span class="px-2 py-1 bg-blue-50 text-blue-600 rounded-full text-xs">EdTech</span>
-                        <span class="px-2 py-1 bg-blue-50 text-blue-600 rounded-full text-xs">Digital Tools</span>
-                    </div>
-                </div>
-                
-                <!-- Skill Card 5 -->
-                <div class="skill-card bg-white p-6 rounded-xl shadow-sm transition duration-300">
-                    <div class="flex items-center justify-center w-12 h-12 bg-blue-100 rounded-full mb-4">
-                        <i data-feather="users" class="text-blue-600 w-6 h-6"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-2 text-gray-800">Classroom Management</h3>
-                    <p class="text-gray-600 mb-4">Proven strategies for creating positive learning environments, fostering student engagement, and managing diverse classroom dynamics.</p>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="px-2 py-1 bg-blue-50 text-blue-600 rounded-full text-xs">Engagement</span>
-                        <span class="px-2 py-1 bg-blue-50 text-blue-600 rounded-full text-xs">Discipline</span>
-                        <span class="px-2 py-1 bg-blue-50 text-blue-600 rounded-full text-xs">Inclusivity</span>
-                    </div>
-                </div>
-                
-                <!-- Skill Card 6 -->
-                <div class="skill-card bg-white p-6 rounded-xl shadow-sm transition duration-300">
-                    <div class="flex items-center justify-center w-12 h-12 bg-blue-100 rounded-full mb-4">
-                        <i data-feather="award" class="text-blue-600 w-6 h-6"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-2 text-gray-800">Assessment Strategies</h3>
-                    <p class="text-gray-600 mb-4">Innovative formative and summative assessment techniques using digital tools to track progress and personalize instruction.</p>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="px-2 py-1 bg-blue-50 text-blue-600 rounded-full text-xs">Formative</span>
-                        <span class="px-2 py-1 bg-blue-50 text-blue-600 rounded-full text-xs">Summative</span>
-                        <span class="px-2 py-1 bg-blue-50 text-blue-600 rounded-full text-xs">Feedback</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Teaching Approach Section -->
-    <section class="py-16 bg-white">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="md:flex md:items-center md:space-x-12">
-                <div class="md:w-1/2 mb-8 md:mb-0">
-                    <img src="with students.jpg" alt="Teaching in Classroom" class="rounded-xl shadow-lg w-full">
-                </div>
-                <div class="md:w-1/2">
-                    <h2 class="text-3xl font-bold text-gray-800 mb-6">My Innovative Teaching Approach</h2>
+                <div class="bg-gradient-to-br from-blue-50 to-purple-50 p-8 rounded-xl shadow-md">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-6">Professional Highlights</h3>
                     <div class="space-y-6">
-                        <div class="flex">
-                            <div class="flex-shrink-0">
-                                <div class="flex items-center justify-center h-10 w-10 rounded-full bg-blue-100 text-blue-600">
-                                    <i data-feather="zap" class="w-5 h-5"></i>
-                                </div>
+                        <div class="flex gap-4">
+                            <div class="text-blue-600">
+                                <i data-feather="chevron-right"></i>
                             </div>
-                            <div class="ml-4">
-                                <h3 class="text-lg font-semibold text-gray-800">Technology Integration</h3>
-                                <p class="text-gray-600">I seamlessly incorporate educational technology like interactive whiteboards, learning management systems, and educational apps to make lessons more engaging and accessible.</p>
+                            <div>
+                                <h4 class="font-medium text-gray-800">25% Engagement Boost</h4>
+                                <p class="text-gray-600">Increased student engagement through blended learning modules</p>
                             </div>
                         </div>
-                        <div class="flex">
-                            <div class="flex-shrink-0">
-                                <div class="flex items-center justify-center h-10 w-10 rounded-full bg-blue-100 text-blue-600">
-                                    <i data-feather="compass" class="w-5 h-5"></i>
-                                </div>
+                        <div class="flex gap-4">
+                            <div class="text-purple-600">
+                                <i data-feather="chevron-right"></i>
                             </div>
-                            <div class="ml-4">
-                                <h3 class="text-lg font-semibold text-gray-800">Inquiry-Based Learning</h3>
-                                <p class="text-gray-600">My lessons are designed to spark curiosity, encouraging students to ask questions, research, and discover knowledge through guided exploration.</p>
+                            <div>
+                                <h4 class="font-medium text-gray-800">Action Research</h4>
+                                <p class="text-gray-600">Studied ICT-based learning impact on student performance</p>
                             </div>
                         </div>
-                        <div class="flex">
-                            <div class="flex-shrink-0">
-                                <div class="flex items-center justify-center h-10 w-10 rounded-full bg-blue-100 text-blue-600">
-                                    <i data-feather="users" class="w-5 h-5"></i>
-                                </div>
+                        <div class="flex gap-4">
+                            <div class="text-green-600">
+                                <i data-feather="chevron-right"></i>
                             </div>
-                            <div class="ml-4">
-                                <h3 class="text-lg font-semibold text-gray-800">Collaborative Learning</h3>
-                                <p class="text-gray-600">I facilitate group projects and discussions that promote teamwork, communication skills, and peer-to-peer learning opportunities.</p>
+                            <div>
+                                <h4 class="font-medium text-gray-800">Mentorship</h4>
+                                <p class="text-gray-600">Guided junior teachers in digital teaching strategies</p>
                             </div>
                         </div>
                     </div>
@@ -301,269 +178,160 @@
         </div>
     </section>
 
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="py-16 bg-gray-50">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Experience Section -->
+    <section id="experience" class="py-16 px-4 bg-gray-50">
+        <div class="max-w-6xl mx-auto">
             <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-gray-800 mb-4">What Colleagues & Students Say</h2>
-      <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">My <span class="gradient-text">Experience</span></h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto rounded-full"></div>
             </div>
-            
-            <div class="grid md:grid-cols-2 gap-8">
-                <!-- Testimonial 1 -->
-                <div class="testimonial-card bg-white p-6 rounded-xl shadow-sm">
-                    <div class="flex items-center mb-4">
-                        <img src="Mahesan.jpg" alt="Principal" class="w-12 h-12 rounded-full mr-4">
+            <div class="space-y-12">
+                <!-- Current Experience -->
+                <div class="bg-white p-8 rounded-xl shadow-md group hover:shadow-lg transition">
+                    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-6">
                         <div>
-                            <h4 class="font-semibold text-gray-800">Mahesan P</h4>
-                            <p class="text-sm text-gray-600">Headmaster , KMAUPS Arikady</p>
+                            <h3 class="text-xl font-bold text-gray-800">English, Hindi & Science Teacher</h3>
+                            <p class="text-gray-600">KMAUPS Arikady</p>
+                        </div>
+                        <div class="bg-blue-100 text-blue-800 px-4 py-1 rounded-full text-sm font-medium">
+                            Jun 2023 - Present
                         </div>
                     </div>
-                    <p class="text-gray-600 italic">"Sahad's ability to integrate technology into his lessons while maintaining strong pedagogical foundations is exceptional. He has transformed our English department's approach to digital literacy."</p>
-                    <div class="flex mt-4">
-                        <i data-feather="star" class="w-4 h-4 text-yellow-400 fill-current"></i>
-                        <i data-feather="star" class="w-4 h-4 text-yellow-400 fill-current"></i>
-                        <i data-feather="star" class="w-4 h-4 text-yellow-400 fill-current"></i>
-                        <i data-feather="star" class="w-4 h-4 text-yellow-400 fill-current"></i>
-                        <i data-feather="star" class="w-4 h-4 text-yellow-400 fill-current"></i>
-                    </div>
+                    <ul class="space-y-4 text-gray-600">
+                        <li class="flex gap-2">
+                            <i data-feather="check-circle" class="text-green-500 mt-1"></i>
+                            <span>Delivered engaging lessons in both classroom and online environments, leveraging 4+ years of teaching experience to improve student engagement and academic performance.</span>
+                        </li>
+                        <li class="flex gap-2">
+                            <i data-feather="check-circle" class="text-green-500 mt-1"></i>
+                            <span>Designed and conducted blended learning modules and interactive online lessons via LMS platforms (Google Classroom, Zoom), boosting student engagement and performance by 25%.</span>
+                        </li>
+                        <li class="flex gap-2">
+                            <i data-feather="check-circle" class="text-green-500 mt-1"></i>
+                            <span>Communicated effectively with students, parents, and colleagues to track progress, resolve challenges, and foster a collaborative learning culture.</span>
+                        </li>
+                        <li class="flex gap-2">
+                            <i data-feather="check-circle" class="text-green-500 mt-1"></i>
+                            <span>Mentored and guided junior teachers in integrating online teaching strategies and educational technologies, enhancing overall teaching effectiveness and collaboration.</span>
+                        </li>
+                    </ul>
                 </div>
-                
-                <!-- Testimonial 2 -->
-                <div class="testimonial-card bg-white p-6 rounded-xl shadow-sm">
-                    <div class="flex items-center mb-4">
-                        <img src="Jasmin.jpg" alt="Student" class="w-12 h-12 rounded-full mr-4">
+                <!-- Previous Experience -->
+                <div class="bg-white p-8 rounded-xl shadow-md group hover:shadow-lg transition">
+                    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-6">
                         <div>
-                            <h4 class="font-semibold text-gray-800">Jasmin Fathima</h4>
-                            <p class="text-sm text-gray-600">Grade 7 Student</p>
+                            <h3 class="text-xl font-bold text-gray-800">English Teacher</h3>
+                            <p class="text-gray-600">GHSS Kumbla</p>
+                        </div>
+                        <div class="bg-purple-100 text-purple-800 px-4 py-1 rounded-full text-sm font-medium">
+                            2022 - 2023
                         </div>
                     </div>
-                    <p class="text-gray-600 italic">"Mr. Sahad makes science so interesting! He uses cool apps and experiments that help me understand difficult concepts. I never liked science before his class."</p>
-                    <div class="flex mt-4">
-                        <i data-feather="star" class="w-4 h-4 text-yellow-400 fill-current"></i>
-                        <i data-feather="star" class="w-4 h-4 text-yellow-400 fill-current"></i>
-                        <i data-feather="star" class="w-4 h-4 text-yellow-400 fill-current"></i>
-                        <i data-feather="star" class="w-4 h-4 text-yellow-400 fill-current"></i>
-                        <i data-feather="star" class="w-4 h-4 text-yellow-400 fill-current"></i>
-                    </div>
-                </div>
-                
-                <!-- Testimonial 3 -->
-                <div class="testimonial-card bg-white p-6 rounded-xl shadow-sm">
-                    <div class="flex items-center mb-4">
-                        <img src="http://static.photos/people/100x100/3" alt="Parent" class="w-12 h-12 rounded-full mr-4">
-                        <div>
-                            <h4 class="font-semibold text-gray-800">Aboobacker</h4>
-                            <p class="text-sm text-gray-600">Parent</p>
-                        </div>
-                    </div>
-                    <p class="text-gray-600 italic">"My daughter used to struggle with writing until she had Mr.Sahad His creative approaches and use of technology have made her excited about writing for the first time."</p>
-                    <div class="flex mt-4">
-                        <i data-feather="star" class="w-4 h-4 text-yellow-400 fill-current"></i>
-                        <i data-feather="star" class="w-4 h-4 text-yellow-400 fill-current"></i>
-                        <i data-feather="star" class="w-4 h-4 text-yellow-400 fill-current"></i>
-                        <i data-feather="star" class="w-4 h-4 text-yellow-400 fill-current"></i>
-                        <i data-feather="star" class="w-4 h-4 text-yellow-400 fill-current"></i>
-                    </div>
-                </div>
-                
-                <!-- Testimonial 4 -->
-                <div class="testimonial-card bg-white p-6 rounded-xl shadow-sm">
-                    <div class="flex items-center mb-4">
-                        <img src="Ashwin.jpg" alt="Colleague" class="w-12 h-12 rounded-full mr-4">
-                        <div>
-                            <h4 class="font-semibold text-gray-800">Ashwin Raj</h4>
-                            <p class="text-sm text-gray-600">Fellow Teacher</p>
-                        </div>
-                    </div>
-                    <p class="text-gray-600 italic">"Sahad's workshops on tech integration have revolutionized our teaching methods. His ability to explain complex tools in simple terms makes him an invaluable colleague."</p>
-                    <div class="flex mt-4">
-                        <i data-feather="star" class="w-4 h-4 text-yellow-400 fill-current"></i>
-                        <i data-feather="star" class="w-4 h-4 text-yellow-400 fill-current"></i>
-                        <i data-feather="star" class="w-4 h-4 text-yellow-400 fill-current"></i>
-                        <i data-feather="star" class="w-4 h-4 text-yellow-400 fill-current"></i>
-                        <i data-feather="star" class="w-4 h-4 text-yellow-400 fill-current"></i>
-                    </div>
+                    <ul class="space-y-4 text-gray-600">
+                        <li class="flex gap-2">
+                            <i data-feather="check-circle" class="text-green-500 mt-1"></i>
+                            <span>Planned and delivered lessons in English adapting content for diverse learning levels.</span>
+                        </li>
+                        <li class="flex gap-2">
+                            <i data-feather="check-circle" class="text-green-500 mt-1"></i>
+                            <span>Collaborated with mentor teachers to refine teaching strategies and implement curriculum objectives effectively.</span>
+                        </li>
+                        <li class="flex gap-2">
+                            <i data-feather="check-circle" class="text-green-500 mt-1"></i>
+                            <span>Conducted action research on the effect of ICT-based learning on student performance, analysing outcomes and recommending strategies for enhanced learning.</span>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Hobbies Section -->
-    <section class="py-16 bg-white">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-gray-800 mb-4">Beyond the Classroom</h2>
-                <p class="text-gray-600 max-w-2xl mx-auto">My personal passions that enrich my teaching and connect me with students</p>
-                <div class="w-20 h-1 bg-blue-600 mx-auto mt-4"></div>
-            </div>
-            
-            <div class="grid md:grid-cols-2 gap-8">
-                <!-- Photography -->
-                <div class="bg-gray-50 p-6 rounded-xl">
-                    <div class="flex items-center mb-4">
-                        <div class="flex items-center justify-center w-12 h-12 bg-blue-100 rounded-full mr-4">
-                            <i data-feather="camera" class="text-blue-600 w-6 h-6"></i>
-                        </div>
-                        <h3 class="text-xl font-semibold text-gray-800">Photography</h3>
-                    </div>
-                    <p class="text-gray-600 mb-4">An avid photographer, I enjoy capturing educational moments and nature scenes. This hobby enhances my ability to create visual learning materials and teach digital media skills.</p>
-                    <div class="grid grid-cols-3 gap-2">
-                        <img src="http://static.photos/nature/300x200/1" alt="Photo 1" class="rounded-lg h-32 object-cover">
-                        <img src="http://static.photos/nature/300x200/2" alt="Photo 2" class="rounded-lg h-32 object-cover">
-                        <img src="http://static.photos/nature/300x200/3" alt="Photo 3" class="rounded-lg h-32 object-cover">
-                    </div>
+    <section class="py-16 px-4 bg-white">
+        <div class="max-w-6xl mx-auto text-center">
+            <h2 class="text-3xl font-bold text-gray-800 mb-8">Hobbies & Interests</h2>
+            <div class="flex flex-wrap justify-center gap-8">
+                <div class="bg-gradient-to-br from-blue-100 to-purple-100 p-6 rounded-xl shadow-md hover:shadow-lg transition w-40">
+                    <i data-feather="camera" class="text-4xl text-blue-600 mb-4"></i>
+                    <p class="text-gray-700 font-medium">Photography</p>
                 </div>
-                
-                <!-- Athletics -->
-                <div class="bg-gray-50 p-6 rounded-xl">
-                    <div class="flex items-center mb-4">
-                        <div class="flex items-center justify-center w-12 h-12 bg-blue-100 rounded-full mr-4">
-                            <i data-feather="activity" class="text-blue-600 w-6 h-6"></i>
-                        </div>
-                        <h3 class="text-xl font-semibold text-gray-800">Athletics</h3>
-                    </div>
-                    <p class="text-gray-600 mb-4">As a former competitive runner, I coach track and field, emphasizing discipline, teamwork, and goal-setting - values that translate directly to academic success.</p>
-                    <div class="grid grid-cols-3 gap-2">
-                        <img src="http://static.photos/sport/300x200/1" alt="Athletics 1" class="rounded-lg h-32 object-cover">
-                        <img src="http://static.photos/sport/300x200/2" alt="Athletics 2" class="rounded-lg h-32 object-cover">
-                        <img src="http://static.photos/sport/300x200/3" alt="Athletics 3" class="rounded-lg h-32 object-cover">
-                    </div>
+                <div class="bg-gradient-to-br from-pink-100 to-purple-100 p-6 rounded-xl shadow-md hover:shadow-lg transition w-40">
+                    <i data-feather="book" class="text-4xl text-pink-600 mb-4"></i>
+                    <p class="text-gray-700 font-medium">Reading</p>
+                </div>
+                <div class="bg-gradient-to-br from-green-100 to-blue-100 p-6 rounded-xl shadow-md hover:shadow-lg transition w-40">
+                    <i data-feather="code" class="text-4xl text-green-600 mb-4"></i>
+                    <p class="text-gray-700 font-medium">Coding</p>
+                </div>
+                <div class="bg-gradient-to-br from-yellow-100 to-orange-100 p-6 rounded-xl shadow-md hover:shadow-lg transition w-40">
+                    <i data-feather="music" class="text-4xl text-yellow-600 mb-4"></i>
+                    <p class="text-gray-700 font-medium">Music</p>
                 </div>
             </div>
         </div>
     </section>
 
-<!-- Contact Section -->
-<section id="contact" class="py-16 bg-blue-600 text-white">
-  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="md:flex md:items-start md:justify-between md:gap-8">
-
-      <!-- Left Column: Text + Social Icons -->
-      <div class="md:w-1/2 mb-8 md:mb-0 flex flex-col justify-between min-h-[400px]">
-        <div>
-          <h2 class="text-3xl font-bold mb-4">Let's Connect</h2>
-          <p class="text-blue-100 mb-6">
-            Interested in discussing teaching opportunities, workshops, or just want to exchange ideas about innovative education? Reach out!
-          </p>
-          <div class="space-y-4">
-            <div class="flex items-center">
-              <i class="fas fa-envelope w-5 h-5 mr-3"></i>
-              <span>sahad.online</span>
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 px-4 bg-gray-50">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Get in <span class="gradient-text">Touch</span></h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto rounded-full"></div>
             </div>
-            <div class="flex items-center">
-              <i class="fas fa-phone w-5 h-5 mr-3"></i>
-              <span>+917012772396</span>
-            </div>
-            <div class="flex items-center">
-              <i class="fas fa-map-marker-alt w-5 h-5 mr-3"></i>
-              <span>KMAUPS Arikady, Arikady , Kasaragod 671321</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Social Icons at Bottom -->
-        <div class="flex space-x-4 mt-6">
-          <a href="https://x.com/sahad_enz" target="_blank"
-             class="w-10 h-10 rounded-full bg-blue-500 flex items-center justify-center hover:bg-blue-400 transition duration-300">
-            <i class="fab fa-twitter text-white text-lg"></i>
-          </a>
-          <a href="https://www.linkedin.com/in/muhammed-sahad-a-s-495388146/" target="_blank"
-             class="w-10 h-10 rounded-full bg-blue-700 flex items-center justify-center hover:bg-blue-600 transition duration-300">
-            <i class="fab fa-linkedin-in text-white text-lg"></i>
-          </a>
-          <a href="https://www.instagram.com/by.sahad" target="_blank"
-             class="w-10 h-10 rounded-full bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-500 flex items-center justify-center hover:opacity-80 transition duration-300">
-            <i class="fab fa-instagram text-white text-lg"></i>
-          </a>
-        </div>
-      </div>
-
-      <!-- Right Column: Contact Form -->
-      <div class="md:w-1/2">
-        <form id="contact-form" action="https://formspree.io/f/mjkarrlg" method="POST"
-              class="bg-white p-6 rounded-lg shadow-lg text-gray-800">
-          <h3 class="text-xl font-semibold mb-4">Send a Message</h3>
-          <div class="mb-4">
-            <label for="name" class="block text-gray-700 mb-2">Name</label>
-            <input type="text" id="name" name="name"
-                   class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                   required>
-          </div>
-          <div class="mb-4">
-            <label for="email" class="block text-gray-700 mb-2">Email</label>
-            <input type="email" id="email" name="email"
-                   class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                   required>
-          </div>
-          <div class="mb-4">
-            <label for="message" class="block text-gray-700 mb-2">Message</label>
-            <textarea id="message" name="message" rows="4"
-                      class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                      required></textarea>
-          </div>
-          <button type="submit"
-                  class="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition duration-300">
-            Send Message
-          </button>
-          <p id="thanks" style="display:none; color:green; margin-top:10px;">Thanks! Your message has been sent.</p>
-        </form>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-8">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="md:flex md:items-center md:justify-between">
-                <div class="text-center md:text-left mb-4 md:mb-0">
-                    <span class="text-xl font-bold">EduSahad</span>
-                    <p class="text-gray-400 mt-1">Inspiring the next generation of learners</p>
+            <div class="flex flex-col md:flex-row gap-12">
+                <div class="md:w-1/2">
+                    <p class="text-gray-600 mb-6">
+                        I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision. Fill out the form and I’ll get back to you as soon as possible.
+                    </p>
+                    <div class="flex gap-6 text-gray-600">
+                        <a href="https://www.facebook.com/yourprofile" target="_blank" class="hover:text-blue-600 transition">
+                            <i data-feather="facebook"></i>
+                        </a>
+                        <a href="https://twitter.com/yourprofile" target="_blank" class="hover:text-blue-400 transition">
+                            <i data-feather="twitter"></i>
+                        </a>
+                        <a href="https://www.instagram.com/yourprofile" target="_blank" class="hover:text-pink-600 transition">
+                            <i data-feather="instagram"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/yourprofile" target="_blank" class="hover:text-blue-700 transition">
+                            <i data-feather="linkedin"></i>
+                        </a>
+                    </div>
                 </div>
-                <div class="flex justify-center md:justify-end space-x-6">
-                    <a href="#home" class="text-gray-400 hover:text-white">Home</a>
-                    <a href="#about" class="text-gray-400 hover:text-white">About</a>
-                    <a href="#skills" class="text-gray-400 hover:text-white">Skills</a>
-                    <a href="#contact" class="text-gray-400 hover:text-white">Contact</a>
+                <div class="md:w-1/2">
+                    <form action="https://formspree.io/f/yourFormID" method="POST" class="space-y-6 bg-white p-8 rounded-xl shadow-md">
+                        <div>
+                            <label for="name" class="block text-gray-700 mb-2 font-medium">Name</label>
+                            <input type="text" id="name" name="name" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-gray-700 mb-2 font-medium">Email</label>
+                            <input type="email" id="email" name="_replyto" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-gray-700 mb-2 font-medium">Message</label>
+                            <textarea id="message" name="message" rows="5" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+                        </div>
+                        <button type="submit" class="px-6 py-3 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700 transition flex items-center gap-2">
+                            <i data-feather="send"></i> Send Message
+                        </button>
+                    </form>
                 </div>
             </div>
-            <div class="mt-8 pt-8 border-t border-gray-800 text-center text-gray-400 text-sm">
-                <p>© 2023 EduSahad Teaching Portfolio. All rights reserved.</p>
-            </div>
         </div>
+    </section>
+
+    <footer class="py-8 bg-white text-center text-gray-500">
+        &copy; 2025 Sahad A S. All rights reserved.
     </footer>
 
     <script>
-        // Mobile menu toggle
-        document.querySelector('.mobile-menu-button').addEventListener('click', function() {
-            document.querySelector('.mobile-menu').classList.toggle('hidden');
-        });
-
-        // Close mobile menu when clicking a link
-        document.querySelectorAll('.mobile-menu a').forEach(link => {
-            link.addEventListener('click', function() {
-                document.querySelector('.mobile-menu').classList.add('hidden');
-            });
-        });
-
-        // Initialize Feather Icons
         feather.replace();
+        const btn = document.getElementById('menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
     </script>
 </body>
-
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
