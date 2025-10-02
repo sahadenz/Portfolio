@@ -32,20 +32,20 @@
 </head>
 <body class="min-h-screen bg-gradient-to-br from-blue-50 to-purple-50">
     <!-- Navigation -->
-    <nav class="bg-white shadow-sm sticky top-0 z-50">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-16">
-                <div class="flex items-center">
-                    <span class="text-xl font-bold gradient-text">Sahad's Portfolio</span>
-                </div>
-                <div class="hidden md:flex items-center space-x-8">
-                    <a href="#about" class="text-gray-600 hover:text-blue-600 transition">About</a>
-                    <a href="#experience" class="text-gray-600 hover:text-blue-600 transition">Experience</a>
-                    <a href="#education" class="text-gray-600 hover:text-blue-600 transition">Education</a>
-                    <a href="#skills" class="text-gray-600 hover:text-blue-600 transition">Skills</a>
-                    <a href="#hobbies" class="text-gray-600 hover:text-blue-600 transition">Hobbies</a>
-                    <a href="#contact" class="text-gray-600 hover:text-blue-600 transition">Contact</a>
-                </div>
+        <nav class="bg-white shadow-sm sticky top-0 z-50">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between h-16">
+                    <div class="flex items-center">
+                        <span class="text-xl font-bold gradient-text">Sahad's Portfolio</span>
+                    </div>
+                    <div class="hidden md:flex items-center space-x-8">
+                        <a href="#about" class="text-gray-600 hover:text-blue-600 transition">About</a>
+                        <a href="#experience" class="text-gray-600 hover:text-blue-600 transition">Experience</a>
+                        <a href="#education" class="text-gray-600 hover:text-blue-600 transition">Education</a>
+                        <a href="#skills" class="text-gray-600 hover:text-blue-600 transition">Skills</a>
+                        <a href="#hobbies" class="text-gray-600 hover:text-blue-600 transition">Hobbies</a>
+                        <a href="#contact" class="text-gray-600 hover:text-blue-600 transition">Contact</a>
+                    </div>
                 <div class="md:hidden flex items-center">
                     <button id="menu-btn" class="text-gray-600">
                         <i data-feather="menu"></i>
@@ -63,7 +63,7 @@
                 <a href="#hobbies" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-blue-600 hover:bg-blue-50 transition">Hobbies</a>
                 <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-blue-600 hover:bg-blue-50 transition">Contact</a>
             </div>
-        </div>
+</div>
     </nav>
 
     <!-- Hero Section -->
@@ -245,27 +245,228 @@
             </div>
         </div>
     </section>
-
     <!-- Hobbies Section -->
     <section class="py-16 px-4 bg-white">
-        <div class="max-w-6xl mx-auto text-center">
-            <h2 class="text-3xl font-bold text-gray-800 mb-8">Hobbies & Interests</h2>
-            <div class="flex flex-wrap justify-center gap-8">
-                <div class="bg-gradient-to-br from-blue-100 to-purple-100 p-6 rounded-xl shadow-md hover:shadow-lg transition w-40">
-                    <i data-feather="camera" class="text-4xl text-blue-600 mb-4"></i>
-                    <p class="text-gray-700 font-medium">Photography</p>
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">My <span class="gradient-text">Hobbies</span></h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto rounded-full"></div>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Photography -->
+                <div class="bg-gradient-to-br from-blue-50 to-purple-50 p-8 rounded-xl shadow-md hover:shadow-lg transition">
+                    <div class="flex flex-col items-center text-center">
+                        <div class="bg-blue-600 p-4 rounded-full text-white mb-4">
+                            <i data-feather="camera"></i>
+                        </div>
+                        <h3 class="font-bold text-xl mb-2">Photography</h3>
+                        <p class="text-gray-600">Capturing moments through the lens with a focus on educational and nature photography.</p>
+                    </div>
                 </div>
-                <div class="bg-gradient-to-br from-pink-100 to-purple-100 p-6 rounded-xl shadow-md hover:shadow-lg transition w-40">
-                    <i data-feather="book" class="text-4xl text-pink-600 mb-4"></i>
-                    <p class="text-gray-700 font-medium">Reading</p>
+                <!-- AI Prompting -->
+                <div class="bg-gradient-to-br from-blue-50 to-purple-50 p-8 rounded-xl shadow-md hover:shadow-lg transition">
+                    <div class="flex flex-col items-center text-center">
+                        <div class="bg-purple-600 p-4 rounded-full text-white mb-4">
+                            <i data-feather="cpu"></i>
+                        </div>
+                        <h3 class="font-bold text-xl mb-2">AI Prompting</h3>
+                        <p class="text-gray-600">Exploring generative AI tools to create educational content and innovative learning materials.</p>
+                    </div>
                 </div>
-                <div class="bg-gradient-to-br from-green-100 to-blue-100 p-6 rounded-xl shadow-md hover:shadow-lg transition w-40">
-                    <i data-feather="code" class="text-4xl text-green-600 mb-4"></i>
-                    <p class="text-gray-700 font-medium">Coding</p>
+                <!-- Athletics -->
+                <div class="bg-gradient-to-br from-blue-50 to-purple-50 p-8 rounded-xl shadow-md hover:shadow-lg transition">
+                    <div class="flex flex-col items-center text-center">
+                        <div class="bg-green-600 p-4 rounded-full text-white mb-4">
+                            <i data-feather="activity"></i>
+                        </div>
+                        <h3 class="font-bold text-xl mb-2">Athletics</h3>
+                        <p class="text-gray-600">Maintaining an active lifestyle through running, yoga, and sports to balance work and wellbeing.</p>
+                    </div>
                 </div>
-                <div class="bg-gradient-to-br from-yellow-100 to-orange-100 p-6 rounded-xl shadow-md hover:shadow-lg transition w-40">
-                    <i data-feather="music" class="text-4xl text-yellow-600 mb-4"></i>
-                    <p class="text-gray-700 font-medium">Music</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+<section id="education" class="py-16 px-4 bg-white">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">My <span class="gradient-text">Education</span></h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto rounded-full"></div>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- B.Ed -->
+                <div class="bg-gradient-to-br from-blue-50 to-purple-50 p-8 rounded-xl shadow-md hover:shadow-lg transition">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="bg-blue-600 p-3 rounded-full text-white">
+                            <i data-feather="book"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg">B.Ed in English</h3>
+                            <p class="text-blue-600">Zainab Memorial B.Ed Centre</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">2021 - 2023 | Kannur University</p>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex gap-2">
+                            <i data-feather="check" class="text-green-500 mt-1"></i>
+                            <span>Delivered multiple seminars and workshops through LMS</span>
+                        </li>
+                        <li class="flex gap-2">
+                            <i data-feather="check" class="text-green-500 mt-1"></i>
+                            <span>Conducted action research on ICT-based learning</span>
+                        </li>
+                    </ul>
+                </div>
+                <!-- BA -->
+                <div class="bg-gradient-to-br from-blue-50 to-purple-50 p-8 rounded-xl shadow-md hover:shadow-lg transition">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="bg-purple-600 p-3 rounded-full text-white">
+                            <i data-feather="graduation-cap"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg">BA English, History & Economics</h3>
+                            <p class="text-purple-600">St.Aloysius College Mangalore</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">2016 - 2019 | Mangalore University</p>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex gap-2">
+                            <i data-feather="check" class="text-green-500 mt-1"></i>
+                            <span>Triple Main in English, History & Economics</span>
+                        </li>
+                        <li class="flex gap-2">
+                            <i data-feather="check" class="text-green-500 mt-1"></i>
+                            <span>Coordinated the College Art Fest</span>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Higher Secondary -->
+                <div class="bg-gradient-to-br from-blue-50 to-purple-50 p-8 rounded-xl shadow-md hover:shadow-lg transition">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="bg-green-600 p-3 rounded-full text-white">
+                            <i data-feather="award"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg">Higher Secondary</h3>
+                            <p class="text-green-600">Kendriya Vidyalaya No.1 CPCRI</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">2014 - 2016</p>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex gap-2">
+                            <i data-feather="check" class="text-green-500 mt-1"></i>
+                            <span>School Students Leader</span>
+                        </li>
+                        <li class="flex gap-2">
+                            <i data-feather="check" class="text-green-500 mt-1"></i>
+                            <span>Represented peers in academic events</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section class="py-16 px-4 bg-gray-50">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Licenses & <span class="gradient-text">Certifications</span></h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto rounded-full"></div>
+            </div>
+            <div class="bg-white p-8 rounded-xl shadow-md max-w-2xl mx-auto space-y-8">
+                <div class="flex items-center gap-6">
+                    <div class="bg-blue-100 p-4 rounded-lg">
+                        <i data-feather="shield" class="text-blue-600 w-8 h-8"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-800">Elementary And Middle School Teachers</h3>
+                        <p class="text-gray-600">Central Board of Secondary Education (CBSE)</p>
+                        <p class="text-gray-500">CTET JAN 2024 • Issued Feb 2024</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-6">
+                    <div class="bg-purple-100 p-4 rounded-lg">
+                        <i data-feather="award" class="text-purple-600 w-8 h-8"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-800">Kerala Teacher Eligibility Test (KTET 2,3&4)</h3>
+                        <p class="text-gray-600">Kerala Government</p>
+                        <p class="text-gray-500">Issued Feb 2023</p>
+                    </div>
+                </div>
+            </div>
+</div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-16 px-4 bg-white">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">My <span class="gradient-text">Skills</span></h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto rounded-full"></div>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Teaching Skills -->
+                <div class="bg-gradient-to-br from-blue-50 to-purple-50 p-6 rounded-xl shadow-sm">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="bg-blue-600 p-2 rounded-full">
+                            <i data-feather="book-open" class="text-white"></i>
+                        </div>
+                        <h3 class="font-bold text-lg">Teaching Skills</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Classroom management</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Creating educational content</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Using effective teaching aids</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Student assessment</span>
+                    </div>
+                </div>
+                <!-- Tech Skills -->
+                <div class="bg-gradient-to-br from-blue-50 to-purple-50 p-6 rounded-xl shadow-sm">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="bg-purple-600 p-2 rounded-full">
+                            <i data-feather="monitor" class="text-white"></i>
+                        </div>
+                        <h3 class="font-bold text-lg">Technology Skills</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">Learning Management Systems</span>
+                        <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">Educational Technology</span>
+                        <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">Google Classroom</span>
+                        <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">Zoom</span>
+                        <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">Canva</span>
+                    </div>
+                </div>
+                <!-- Soft Skills -->
+                <div class="bg-gradient-to-br from-blue-50 to-purple-50 p-6 rounded-xl shadow-sm">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="bg-green-600 p-2 rounded-full">
+                            <i data-feather="users" class="text-white"></i>
+                        </div>
+                        <h3 class="font-bold text-lg">Soft Skills</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">Teamwork</span>
+                        <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">Communication</span>
+                        <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">Mentoring</span>
+                        <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">Organization</span>
+                    </div>
+                </div>
+                <!-- Languages -->
+                <div class="bg-gradient-to-br from-blue-50 to-purple-50 p-6 rounded-xl shadow-sm">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="bg-yellow-600 p-2 rounded-full">
+                            <i data-feather="globe" class="text-white"></i>
+                        </div>
+                        <h3 class="font-bold text-lg">Languages</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full text-sm">Malayalam</span>
+                        <span class="px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full text-sm">English</span>
+                        <span class="px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full text-sm">Hindi</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -275,63 +476,133 @@
     <section id="contact" class="py-16 px-4 bg-gray-50">
         <div class="max-w-6xl mx-auto">
             <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-gray-800 mb-4">Get in <span class="gradient-text">Touch</span></h2>
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Get In <span class="gradient-text">Touch</span></h2>
                 <div class="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto rounded-full"></div>
             </div>
-            <div class="flex flex-col md:flex-row gap-12">
-                <div class="md:w-1/2">
-                    <p class="text-gray-600 mb-6">
-                        I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision. Fill out the form and I’ll get back to you as soon as possible.
-                    </p>
-                    <div class="flex gap-6 text-gray-600">
-                        <a href="https://www.facebook.com/yourprofile" target="_blank" class="hover:text-blue-600 transition">
-                            <i data-feather="facebook"></i>
-                        </a>
-                        <a href="https://twitter.com/yourprofile" target="_blank" class="hover:text-blue-400 transition">
-                            <i data-feather="twitter"></i>
-                        </a>
-                        <a href="https://www.instagram.com/yourprofile" target="_blank" class="hover:text-pink-600 transition">
-                            <i data-feather="instagram"></i>
-                        </a>
-                        <a href="https://www.linkedin.com/in/yourprofile" target="_blank" class="hover:text-blue-700 transition">
-                            <i data-feather="linkedin"></i>
-                        </a>
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="bg-white p-8 rounded-xl shadow-md">
+                    <h3 class="text-xl font-bold text-gray-800 mb-6">Contact Information</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-center gap-4">
+                            <div class="bg-blue-100 p-3 rounded-full">
+                                <i data-feather="mail" class="text-blue-600"></i>
+                            </div>
+                            <div>
+                                <p class="text-gray-600">Email</p>
+                                <a href="mailto:sahadnow@gmail.com" class="text-blue-600 hover:underline">sahadnow@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div class="bg-purple-100 p-3 rounded-full">
+                                <i data-feather="phone" class="text-purple-600"></i>
+                            </div>
+                            <div>
+                                <p class="text-gray-600">Phone</p>
+                                <a href="tel:+918281735491" class="text-purple-600 hover:underline">+91 8281735491</a>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div class="bg-green-100 p-3 rounded-full">
+                                <i data-feather="globe" class="text-green-600"></i>
+                            </div>
+                            <div>
+                                <p class="text-gray-600">Website</p>
+                                <a href="http://www.sahad.online" target="_blank" class="text-green-600 hover:underline">www.sahad.online</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-8">
+                        <h4 class="font-medium text-gray-800 mb-4">Connect with me</h4>
+                        <div class="flex gap-4">
+                            <a href="#" class="bg-blue-100 p-3 rounded-full text-blue-600 hover:bg-blue-600 hover:text-white transition">
+                                <i data-feather="facebook"></i>
+                            </a>
+                            <a href="https://x.com/sahad_enz" class="bg-blue-100 p-3 rounded-full text-blue-400 hover:bg-blue-400 hover:text-white transition">
+                                <i data-feather="twitter"></i>
+                            </a>
+                            <a href="https://www.instagram.com/by.sahad" class="bg-pink-100 p-3 rounded-full text-pink-600 hover:bg-pink-600 hover:text-white transition">
+                                <i data-feather="instagram"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/muhammed-sahad-a-s-495388146" class="bg-blue-100 p-3 rounded-full text-blue-700 hover:bg-blue-700 hover:text-white transition">
+                                <i data-feather="linkedin"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
-                <div class="md:w-1/2">
-                    <form action="https://formspree.io/f/yourFormID" method="POST" class="space-y-6 bg-white p-8 rounded-xl shadow-md">
-                        <div>
-                            <label for="name" class="block text-gray-700 mb-2 font-medium">Name</label>
-                            <input type="text" id="name" name="name" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
-                        </div>
-                        <div>
-                            <label for="email" class="block text-gray-700 mb-2 font-medium">Email</label>
-                            <input type="email" id="email" name="_replyto" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
-                        </div>
-                        <div>
-                            <label for="message" class="block text-gray-700 mb-2 font-medium">Message</label>
-                            <textarea id="message" name="message" rows="5" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
-                        </div>
-                        <button type="submit" class="px-6 py-3 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700 transition flex items-center gap-2">
-                            <i data-feather="send"></i> Send Message
-                        </button>
-                    </form>
-                </div>
+               <div class="bg-white p-8 rounded-xl shadow-md">
+    <h3 class="text-xl font-bold text-gray-800 mb-6">Send Me a Message</h3>
+    <form class="space-y-6" action="https://formspree.io/f/mjkarrlg" method="POST">
+        <div>
+            <label for="name" class="block text-gray-700 mb-2">Your Name</label>
+            <input type="text" name="name" id="name" required
+                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition">
+        </div>
+        <div>
+            <label for="email" class="block text-gray-700 mb-2">Your Email</label>
+            <input type="email" name="email" id="email" required
+                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition">
+        </div>
+        <div>
+            <label for="subject" class="block text-gray-700 mb-2">Subject</label>
+            <input type="text" name="subject" id="subject"
+                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition">
+        </div>
+        <div>
+            <label for="message" class="block text-gray-700 mb-2">Your Message</label>
+            <textarea name="message" id="message" rows="4"
+                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition" required></textarea>
+        </div>
+        <button type="submit"
+            class="px-6 py-3 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700 transition w-full">
+            Send Message
+        </button>
+    </form>
+</div>
             </div>
         </div>
     </section>
 
-    <footer class="py-8 bg-white text-center text-gray-500">
-        &copy; 2025 Sahad A S. All rights reserved.
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8 px-4">
+        <div class="max-w-6xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                <div>
+                    <p class="text-gray-300">© 2024 Sahad A S. All rights reserved.</p>
+                </div>
+                <div class="flex gap-6">
+                    <a href="#" class="text-gray-300 hover:text-white transition">Privacy Policy</a>
+                    <a href="#" class="text-gray-300 hover:text-white transition">Terms of Service</a>
+                </div>
+            </div>
+        </div>
     </footer>
 
     <script>
-        feather.replace();
-        const btn = document.getElementById('menu-btn');
-        const menu = document.getElementById('mobile-menu');
-        btn.addEventListener('click', () => {
+        // Mobile menu toggle
+        document.getElementById('menu-btn').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
             menu.classList.toggle('hidden');
         });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+                
+                // Close mobile menu if open
+                const menu = document.getElementById('mobile-menu');
+                if (!menu.classList.contains('hidden')) {
+                    menu.classList.add('hidden');
+                }
+            });
+        });
+        
+        // Initialize Feather Icons
+        feather.replace();
     </script>
 </body>
 </html>
